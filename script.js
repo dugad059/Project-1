@@ -9,6 +9,12 @@ const settings = {
 	}
 };
 
-$.ajax(settings).done(function (response) {
+$.ajax(settings).then(function (response) {
 	console.log(response);
+}, function() {
+    console.log('Something went wrong')
+    console.log(error);
 });
+
+
+
