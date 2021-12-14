@@ -15,31 +15,40 @@ const settings = {
 
 
 // Event Listeners
+$(document).ready(function() {
 $('.select').on('change', function () {
     const value = $(this).val();
     console.log(value)
-  
+
+})
 })
 
 // Functions 
 
 $.ajax(settings).then(function (response) {
-    const myArray = response
-    console.log(myArray);
-}), function searchTable( value, myArray) {
-    let filterData = []
+    console.log(response);
+    let html = '';
+    response.forEach(element => {
+        let card = `<div class="card">
+                    <div class="card-body">
+                    <h5 class="card-title">Exercise</h5>
+                    <p id="name"> Exercise Name: ${element.name}</p>
+                    <p id="bodyPart">Body Part: ${element.target}</p>
+                    <p id="equipment">Equipment: ${element.equipment}</p>
+                    </div>
+                  </div>`  
 
-    for (let i=0; i<myArray.lenght; i++) {
-        const muscleGroup = myArray[i].bodyPart
+    html = html.concat(card);
 
-        if(name.includes(value)){
-            filterData.push(data[i])
+    $(main).empty().append(html);
 
-        }
-    }
+   
+        
+    });
+})
 
-    console.log(filterData)
-}
+
+
 
 
 
