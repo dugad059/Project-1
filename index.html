@@ -13,20 +13,19 @@
 
 <body>
     <h1>Exercise Selector</h1>
-    <form>
-        <lable> Enter Muscle Group Below:
-            <input type="text" placeholder='Whatcha Hittin?'>
-        </lable>
-        <input type="submit">
-    </form>
-    <main>
-        <h3>Exercise Name:</h3>
-        <p id="name"></p>
-        <p>Body Part:</p>
-        <p id="target"></p>
-        <p>Equipment:</p>
-        <p id="equipment"></p>
-    </main>
+    <p>The select element is used to create a drop-down list.</p>
+
+
+    <label for="exercise">Choose a Muscle Group</label>
+    <div class="container">
+        <select name=muscleGroup id="ddlselect" class=select>
+            <option value="" selected disabled> Select Muscle</option>
+            <option value="chest">Chest</option>
+            <option value="quads">Quads</option>
+            <option value="biceps">Biceps</option>
+            <option value="calves">Calves</option>
+        </select>
+    </div>
 
 </body>
 

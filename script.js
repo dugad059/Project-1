@@ -10,30 +10,42 @@ const settings = {
     }
 };
 
+
 // Element Refs
-const $exerciseName = $('#name');
-const $bodyPart = $('#target');
-const $equipment = $('#equipment');
-const $form = $('form');
-const $input = $('input[type="text"]');
+
 
 // Event Listeners
-$form.on('sumbit', handleGetData);
+$('.select').on('change', function () {
+    const value = $(this).val();
+    console.log(value)
+  
+})
 
 // Functions 
-function handleGetData(evt) {
-    evt.preventDefault();
-    const userInput = $input.val()
 
-    $.ajax(settings + userInput).then(function (data) {
-        console.log(data);
-        $exerciseName.text(data[0].name);
-        $bodyPart.text(data[0].target);
-        $equipment.text(data[0].equipment)
+$.ajax(settings).then(function (response) {
+    const myArray = response
+    console.log(myArray);
+}), function searchTable( value, myArray) {
+    let filterData = []
+
+    for (let i=0; i<myArray.lenght; i++) {
+        const muscleGroup = myArray[i].bodyPart
+
+        if(name.includes(value)){
+            filterData.push(data[i])
+
+        }
+    }
+
+    console.log(filterData)
+}
 
 
-    }, function (error) {
-        console.log('Something went wrong')
-        console.log(error);
-    })
-};
+
+
+
+
+
+
+
