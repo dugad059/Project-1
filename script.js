@@ -11,43 +11,50 @@ const settings = {
 };
 
 
-
-
-
-
 $(document).ready(function () {
-    $('.select').on('change', function () {
-        const value = $('.select').val();
-        console.log(value)
+    $('.selectMuscle').on('change', function () {
+        const valueMuscle = $('.selectMuscle').val();
 
-        $.ajax(settings).then(function (data) {
-            console.log(data)
 
-            const filtered = data.filter(function(ddlSelector){
-                    return ddlSelector.target === value
-            } )
-                console.log(filtered)
+        $(document).ready(function () {
+            $('.selectEquip').on('change', function () {
+                const valueEquip = $('.selectEquip').val();
 
-            let html = '';
-            filtered.forEach(element => {
-                let card = `<div class="card">
+
+                $.ajax(settings).then(function (data) {
+                    console.log(data)
+
+                    const filtered = data.filter(function (ddlSelector) {
+                        return ddlSelector.target === valueMuscle && ddlSelector.equipment === valueEquip
+                    })
+
+
+                    let html = '';
+                    filtered.forEach(element => {
+                        let card =
+                            `<div id="card" style="width: 18rem;">
+                        <img src='${element.gifUrl}' id="cardImgHolder" alt= 'Oops ...'>
                         <div class="card-body">
-                        <h5 class="card-title">Exercise</h5>
-                        <p id="name"> Exercise Name: ${element.name}</p>
-                        <p id="bodyPart">Body Part: ${element.target}</p>
-                        <p id="equipment">Equipment: ${element.equipment}</p>
+                        <h3 id="name"> Exercise Name:</h3> 
+                        <p>${element.name}</p>
+                        <h4 id="bodyPart">Body Part:</h4> 
+                        <p>${element.target}</p>
+                        <h4 id="equipment">Equipment:</h4>
+                        <p>${element.equipment}</p>
                         </div>
                       </div>`
 
-                html = html.concat(card);
+                        html = html.concat(card);
 
-                $('main').empty().append(html);
-
-
-
-            });
+                        $('main').empty().append(html);
 
 
+
+                    });
+
+
+                })
+            })
         })
     })
 })

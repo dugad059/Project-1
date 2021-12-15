@@ -1,0 +1,16 @@
+#dropDownList {
+    display: flex;
+    justify-content: center;
+}
+
+#muscleLabel, #equipLabel {
+    margin: 0 10px 0 20px;
+
+}
+
+main {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
