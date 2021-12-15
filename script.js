@@ -26,11 +26,15 @@ $(document).ready(function () {
 
                     const filtered = data.filter(function (ddlSelector) {
                         return ddlSelector.target === valueMuscle && ddlSelector.equipment === valueEquip
+
+
+
+
                     })
 
 
                     let html = '';
-                    filtered.forEach(element => {
+                    filtered.forEach(function (element) {
                         let card =
                             `<div id="card" style="width: 18rem;">
                         <img src='${element.gifUrl}' id="cardImgHolder" alt= 'Oops ...'>
@@ -49,8 +53,9 @@ $(document).ready(function () {
                         $('main').empty().append(html);
 
 
-
                     });
+
+
 
 
                 })
