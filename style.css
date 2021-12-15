@@ -1,3 +1,9 @@
+main {
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
 #dropDownList {
     display: flex;
     justify-content: center;
@@ -8,9 +14,5 @@
 
 }
 
-main {
-    display: flex !important;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+
 
