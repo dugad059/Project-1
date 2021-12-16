@@ -8,10 +8,24 @@ main {
     justify-content: space-around;
 }
 
-.heroTitle{
+#home {
+    background: linear-gradient(rgba(17,36,90, 0.8), rgba(17,36,90, 0.8)), url("../Pictures/header4.jpeg");
+    height: 50vh;
+    background-position: center; 
+    background-size: cover;
+    background-attachment: fixed;
     display: flex;
-    justify-content: center;
-}
+    align-items: center;
+ }
+ 
+ #home h1 {
+     font-weight: 700;
+ }
+ 
+ #home p {
+     max-width: 550px;
+     margin: auto;
+ }
 
 #dropDownList {
     display: flex;
@@ -27,27 +41,7 @@ main {
 #ddlselectMuscle, #ddlselectEqip {
     background-color: rgba(163, 198, 245, 0.8);
     text-align: center;
-    
 }
 
-#home {
-   background: linear-gradient(rgba(17,36,90, 0.8), rgba(17,36,90, 0.8)), url("../Pictures/header4.jpeg");
-   height: 50vh;
-   background-position: center; 
-   background-size: cover;
-   background-attachment: fixed;
-   display: flex;
-   align-items: center;
-}
-
-
-#home h1 {
-    font-weight: 700;
-}
-
-#home p {
-    max-width: 550px;
-    margin: auto;
-}
 
 
