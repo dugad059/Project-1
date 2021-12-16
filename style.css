@@ -33,15 +33,17 @@ main {
     margin-top: 30px;
 }
 
+#ddlselectMuscle, #ddlselectEqip {
+    background-color: rgba(163, 198, 245, 0.8);
+    text-align: center;
+}
+
 #muscleLabel, #equipLabel {
     margin: 0 10px 0 20px;
 
 }
 
-#ddlselectMuscle, #ddlselectEqip {
-    background-color: rgba(163, 198, 245, 0.8);
-    text-align: center;
-}
+
 
 
 
