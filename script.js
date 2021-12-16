@@ -25,8 +25,23 @@ $(document).ready(function () {
                     console.log(data)
 
                     const filtered = data.filter(function (ddlSelector) {
-                        ddlSelector.target === valueMuscle && ddlSelector.equipment === valueEquip
+                        return ddlSelector.target === valueMuscle && ddlSelector.equipment === valueEquip
+                     
+                        
+
                     })
+                        
+
+
+
+
+
+
+
+
+
+
+
 
 
                     let html = '';
