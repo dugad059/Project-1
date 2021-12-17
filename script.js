@@ -26,23 +26,7 @@ $(document).ready(function () {
 
                     const filtered = data.filter(function (ddlSelector) {
                         return ddlSelector.target === valueMuscle && ddlSelector.equipment === valueEquip
-                     
-                        
-
                     })
-                        
-
-
-
-
-
-
-
-
-
-
-
-
 
                     let html = '';
                     filtered.forEach(function (element) {
