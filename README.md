@@ -8,9 +8,11 @@ This web application allows you to find specific exercises based on a muscle gro
 * HTML 5
 * CSS 3
 * JavaScript
-* jQuery
-* Bootstrap
-* ExerciseDB API
+* Node.js
+* Express
+* EJS
+* Mongoose
+* MongoDB
 
 
 ## Screenshots 
@@ -26,4 +28,4 @@ This web application allows you to find specific exercises based on a muscle gro
 
 ## Future Enhancements
 
-* The ability to click on an exercise to add to a workout template 
+* Adding Authentication so you can create an account then login.
