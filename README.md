@@ -8,22 +8,12 @@ This web application allows you to find specific exercises based on a muscle gro
 * HTML 5
 * CSS 3
 * JavaScript
-* Node.js
-* Express
-* EJS
-* Mongoose
-* MongoDB
-
-
-## Screenshots 
-
-![]()
-![]()
+* jQuery
 
 
 ## Getting Started
 
-[Click HERE]() to start logging you expenses!!
+[Click HERE](https://project-1-puce.vercel.app/) to start logging you expenses!!
 
 
 ## Future Enhancements
